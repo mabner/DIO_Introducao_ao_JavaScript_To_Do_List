@@ -1,3 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+	font-family: "Roboto", sans-serif;
+}
+
+body {
+	justify-content: center;
+}
+
+button {
+	border: 1px solid rgb(153, 5, 104);
+	border-radius: 5px;
+	background-color: rgb(234, 245, 133);
+	color: rgb(153, 5, 104);
+	text-align: center;
+	padding: 5px;
+}
+
+input[type="text"] {
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+.task-list {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+.task-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+ul {
+	list-style: none;
+}
+
 ul li.done {
 	text-decoration: line-through;
+	color: grey;
 }
