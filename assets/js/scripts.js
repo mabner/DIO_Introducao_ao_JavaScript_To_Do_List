@@ -11,10 +11,11 @@ function addTask() {
 	checkbox.type = "checkbox";
 
 	var info = document.getElementById("taskName").value;
+	taskInfo = document.createTextNode(info);
 
-	li.innerHTML = info;
+	li.appendChild(checkbox);
+	li.appendChild(taskInfo);
 
-	taskList.appendChild(checkbox);
 	taskList.appendChild(li);
 
 }
