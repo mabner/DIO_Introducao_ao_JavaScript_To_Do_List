@@ -1,6 +1,7 @@
 
 var taskList = document.getElementById("task-list");
-var add = document.getElementById("add");
+const ADD = document.getElementById("add");
+const TASK = document.getElementById("taskName")
 
 
 function addTask() {
@@ -10,7 +11,7 @@ function addTask() {
 	var checkbox = document.createElement("input");
 	checkbox.type = "checkbox";
 
-	var info = document.getElementById("taskName").value;
+	var info = TASK.value;
 	taskInfo = document.createTextNode(info);
 
 	li.appendChild(checkbox);
@@ -18,9 +19,11 @@ function addTask() {
 
 	taskList.appendChild(li);
 
+	TASK.value = "";
+
 }
 
-add.addEventListener("click", addTask);
+ADD.addEventListener("click", addTask);
 
 taskList.addEventListener("click", function (e) {
 	if (e.target.tagName === "INPUT") {
