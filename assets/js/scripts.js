@@ -5,11 +5,18 @@ var add = document.getElementById("add");
 
 function addTask() {
 	var li = document.createElement("li");
-	var info = document.getElementById("taskName").value;
-	taskInfo = document.createTextNode(info);
+	li.className = "task-item";
 
+	var checkbox = document.createElement("input");
+	checkbox.type = "checkbox";
+
+	var info = document.getElementById("taskName").value;
+
+	li.innerHTML = info;
+
+	taskList.appendChild(checkbox);
 	taskList.appendChild(li);
-	li.appendChild(taskInfo);
+
 }
 
 add.addEventListener("click", addTask);
