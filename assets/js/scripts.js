@@ -22,3 +22,8 @@ function addTask() {
 
 add.addEventListener("click", addTask);
 
+taskList.addEventListener("click", function (e) {
+	if (e.target.tagName === "INPUT") {
+		e.target.parentElement.classList.toggle("done");
+	}
+}, false);
